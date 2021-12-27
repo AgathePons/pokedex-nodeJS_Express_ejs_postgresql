@@ -3,15 +3,17 @@
 <%- include('partials/head') %>
 <body>
   <%- include('partials/header') %>
-  <main>
-    <h2>Main</h2>
-    <ul>
+  <main class="homepage">
       <% for (const pokemon of pokemons) { %>
-      <li>
-        <%= pokemon.nom %>
-      </li>
+      <div class="card">
+        <div class="card-img">
+          <img src="img/<%= pokemon.numero %>.png" alt="Image de <%= pokemon.nom %>">
+        </div>
+        <div class="card-text">
+          <h2>#<%= pokemon.numero %> <%= pokemon.nom %></h2>
+        </div>
+      </div>
       <% } %>
-    </ul>
   </main>
 </body>
 </html>

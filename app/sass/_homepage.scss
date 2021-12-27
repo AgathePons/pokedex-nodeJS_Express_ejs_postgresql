@@ -1,0 +1,18 @@
+.homepage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .card {
+    background-color: $darken-primary-color;
+    margin-top: $base-space;
+    padding: $base-space;
+    border-radius: 1rem;
+    .card-img {
+      max-width: 250px;
+      & > img {
+        width: 100%;
+      }
+    }
+  }
+}
+
