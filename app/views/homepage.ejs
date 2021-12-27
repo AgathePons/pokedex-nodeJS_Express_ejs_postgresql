@@ -5,6 +5,13 @@
   <%- include('partials/header') %>
   <main>
     <h2>Main</h2>
+    <ul>
+      <% for (const pokemon of pokemons) { %>
+      <li>
+        <%= pokemon.nom %>
+      </li>
+      <% } %>
+    </ul>
   </main>
 </body>
 </html>
