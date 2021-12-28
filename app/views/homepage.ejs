@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/head') %>
+
 <body>
   <%- include('partials/header') %>
   <main class="homepage">
-      <% for (const pokemon of pokemons) { %>
+    <% for (const pokemon of pokemons) { %>
+    <a href="/pokemon/<%= pokemon.numero %>" class="card-link">
       <div class="card">
         <div class="card-img">
           <img src="img/<%= pokemon.numero %>.png" alt="Image de <%= pokemon.nom %>">
@@ -13,7 +15,9 @@
           <h2>#<%= pokemon.numero %> <%= pokemon.nom %></h2>
         </div>
       </div>
-      <% } %>
+    </a>
+    <% } %>
   </main>
 </body>
+
 </html>

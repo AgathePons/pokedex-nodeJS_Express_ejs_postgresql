@@ -2,15 +2,32 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  .card {
-    background-color: $darken-primary-color;
-    margin-top: $base-space;
-    padding: $base-space;
-    border-radius: 1rem;
-    .card-img {
-      max-width: 250px;
-      & > img {
-        width: 100%;
+  .card-link {
+    &:hover {
+      .card {
+        box-shadow: 5px 5px 0 darken($darken-primary-color, 10);
+      }
+    }
+    .card {
+      background-color: $darken-primary-color;
+      margin-top: $base-space;
+      padding: $base-space;
+      border-radius: 1rem;
+      box-shadow: 0 0 0 $darken-primary-color;
+      transition: box-shadow .3s ease-out;
+      .card-img {
+        max-width: 220px;
+        margin-bottom: $base-space;
+        & > img {
+          width: 100%;
+        }
+      }
+      .card-text {
+        & > h2 {
+          text-align: center;
+          color: $colored-light;
+          font-size: 1rem;
+        }
       }
     }
   }
