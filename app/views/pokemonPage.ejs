@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head') %>
+
+<body>
+  <%- include('partials/header') %>
+  <main class="pokemon-page">
+    <div class="pokemon-detail">
+      <h2 class="pokemon-detail-title">Détails de <%= pokemon.nom %></h2>
+      <div class="pokemon-detail-left">
+        <img src="/img/<%= pokemon.numero %>.png" alt="Image de <%= pokemon.nom %>">
+      </div>
+      <div class="pokemon-detail-right">
+        <h3 class="pokemon-detail-subtitle">
+          #<%= pokemon.numero %> <%= pokemon.nom %>
+        </h3>
+        <div class="pokemon-detail-types">
+          <span class="pokemon-detail-type <%= pokemon.type0 %>"><%= pokemon.type0 %></span>
+          <% if(pokemon.type1) { %>
+          <span class="pokemon-detail-type <%= pokemon.type1 %>"><%= pokemon.type1 %></span>
+          <% } %>
+        </div>
+        <div class="pokemon-detail-stats">
+          <h3 class="pokemon-detail-stats-subtitle">Statistiques</h3>
+          <table class="pokemon-detail-stats-table">
+            <tbody>
+              <tr>
+                <td>PV</td>
+                <td><%= pokemon.pv %></td>
+                <td>
+                  <span class="pokemon-detail-stats-progressbar"></span>
+                </td>
+              </tr>
+              <tr>
+                <td>Attaque</td>
+                <td><%= pokemon.attaque %></td>
+                <td>
+                  <span class="pokemon-detail-stats-progressbar"></span>
+                </td>
+              </tr>
+              <tr>
+                <td>Défense</td>
+                <td><%= pokemon.defense %></td>
+                <td>
+                  <span class="pokemon-detail-stats-progressbar"></span>
+                </td>
+              </tr>
+              <tr>
+                <td>Attaque Spé.</td>
+                <td><%= pokemon.attaque_spe %></td>
+                <td>
+                  <span class="pokemon-detail-stats-progressbar"></span>
+                </td>
+              </tr>
+              <tr>
+                <td>Défense Spé.</td>
+                <td><%= pokemon.defense_spe %></td>
+                <td>
+                  <span class="pokemon-detail-stats-progressbar"></span>
+                </td>
+              </tr>
+              <tr>
+                <td>Vitesse</td>
+                <td><%= pokemon.vitesse %></td>
+                <td>
+                  <span class="pokemon-detail-stats-progressbar"></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-link">
+      <a href="/">Revenir à la liste</a>
+    </div>
+  </main>
+</body>
+
+</html>
